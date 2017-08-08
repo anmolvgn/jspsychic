@@ -19,52 +19,55 @@
 
 	<h1> Guess what I'm thinking??? </h1>
 
+	<input type="text" name="wins">
+
 	<script type="text/javascript">
 		//cpu generated char
 		// var key = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r", "s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"];
-		//
-		var guess = function () {
-
-			var randomIndex = Math.floor(Math.random() * key.length);
-
-			var key = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r", "s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"];
-				// for (var i = 0; i=<36; i++) {
-
-			var random = key[randomIndex];
-
-			// return random;
-			// var random = key.charAt(Math.floor(Math.random()* 100+1) * key.length);
-
-					// for (var i = 0; i=<1; i++) {
-
-					// random = key.charAt(Math.Floor(Math.random()* 100+1) * key.length);	
-			// console.log(guess());
-			// text(random);
-				// };
-			// };
-			// };
-		// };
-		// guess()
+		var randomIndex = " ";
+		var key="abcdefghijklmnopqrstuvwxyz1234567890";
+		// var key = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r", "s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"];
+		function guess(){
+			for(var i = 0; i<key.length;i++) {
+			randomIndex = key.charAt(Math.floor(Math.random() * key.length));
+			
+			// try to create a var to store the console.logs! Look @ class repos to compare the hw solutions with independent code.
+			// console.log(randomIndex[0]);
 		};
-		console.log(guess());
+		};
+		guess();
+		
 		//user-input
-		console.log (guess());
-		var ui = function() {
-
-			var input = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"];
-			var counterwin = 
-
-			for(var i = 0; i<input.length;i++) {
-
-				if (input[]===random) {
-					console.log("you win!");
-				};
-				else{
-					console.log("you lose!!!");
-				};
-			};
-
+		var userkey = "abcdefghijklmnopqrstuvwxyz1234567890";
+		
+		window.addEventListener("keyup", ui);
+		var keystrokes = "";
+		function ui(keystroke) {
+				var userinput = keystroke.char;
+			keystrokes += userinput;
+			console.log(keystrokes);
+		// alert(keystroke.char);
 		};
+
+		// user counter
+		function counter() {
+			var wins = 0;
+			var losses = 0;
+				for (var i = 0; i<6;i++) {
+					if (ui===guess){
+						console.log("you win!");
+						wins + 1;
+					}
+					else if(i=6) {
+						console.log("you lose");
+						losses + 1;
+					};
+					tries = 0;
+					
+				};
+				
+			}
+		}
 
 	</script>
 
